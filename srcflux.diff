@@ -1,0 +1,11 @@
+--- ciao-4.16/bin/srcflux.orig	2024-05-02 15:56:20.486124334 -0400
++++ ciao-4.16/bin/srcflux	2024-05-02 15:56:20.471124144 -0400
+@@ -1675,7 +1675,7 @@
+ 
+     infile = myparams.infile
+ 
+-    with newpf(tmpdir=myparams.tmpdir, copyuser=False, ardlib=False) as foo:
++    with newpf(tmpdir=myparams.tmpdir, copyuser=False, ardlib=True) as foo:
+         specextract2 = make_tool("specextract")
+         specextract2.infile  = "{}[sky={}]".format(infile,srcreg)
+         specextract2.bkgfile = "{}[sky={}]".format(infile,bkgreg)

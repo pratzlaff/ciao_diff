@@ -1,0 +1,10 @@
+--- ciao-4.16/bin/tgsplit.orig	2024-05-02 15:56:20.494124436 -0400
++++ ciao-4.16/bin/tgsplit	2024-05-02 15:56:20.484124309 -0400
+@@ -264,6 +264,7 @@
+         raise ValueError("Unexpected RESPFILE found in {}".format(infile))
+     # strip trailing ")", remove DM filter, 
+     ff = isgrid[1].split(")")[0].split("[")[0]
++    return ff
+     
+     return os.path.join( os.path.dirname( infile ), os.path.basename(ff))
+ 
