@@ -1,11 +1,11 @@
---- ciao-4.16/bin/srcflux.orig	2024-05-02 15:56:20.486124334 -0400
-+++ ciao-4.16/bin/srcflux	2024-05-02 15:56:20.471124144 -0400
-@@ -1675,7 +1675,7 @@
+[1m--- ./ciao-4.17/bin/srcflux.orig	2024-12-17 15:31:41.389682837 -0500[0m
+[1m+++ ./ciao-4.17/bin/srcflux	2024-12-17 15:37:23.705170961 -0500[0m
+[36m@@ -1677,7 +1677,7 @@[0m
  
      infile = myparams.infile
  
--    with newpf(tmpdir=myparams.tmpdir, copyuser=False, ardlib=False) as foo:
-+    with newpf(tmpdir=myparams.tmpdir, copyuser=False, ardlib=True) as foo:
+[31m-    with newpf(tmpdir=myparams.tmpdir, copyuser=False, ardlib=False) as foo:[0m
+[32m+    with newpf(tmpdir=myparams.tmpdir, copyuser=False, ardlib=True) as foo:[0m
          specextract2 = make_tool("specextract")
          specextract2.infile  = "{}[sky={}]".format(infile,srcreg)
          specextract2.bkgfile = "{}[sky={}]".format(infile,bkgreg)

@@ -1,15 +1,15 @@
---- ciao-4.16/bin/fullgarf.orig	2024-05-02 15:56:20.478124233 -0400
-+++ ciao-4.16/bin/fullgarf	2024-05-02 15:56:20.498124486 -0400
-@@ -564,10 +564,10 @@
+[1m--- ./ciao-4.17/bin/fullgarf.orig	2024-12-17 15:31:41.421683302 -0500[0m
+[1m+++ ./ciao-4.17/bin/fullgarf	2024-05-02 15:56:20.498124486 -0400[0m
+[36m@@ -564,10 +564,10 @@[0m
  runDmarfadd ()
  {
     grat=$garm
--   holdfile=thisfile.istemporary
-+   holdfile=$(mktemp -p .)
+[31m-   holdfile=thisfile.istemporary[0m
+[32m+   holdfile=$(mktemp -p .)[0m
  
     type=${grat}_${ord}_garf.fits
--   ls -1 ${root}*${grat}_${ord}.fits > $holdfile
-+   ls -1 ${root}*${grat}_${ord}.fits >> $holdfile
+[31m-   ls -1 ${root}*${grat}_${ord}.fits > $holdfile[0m
+[32m+   ls -1 ${root}*${grat}_${ord}.fits >> $holdfile[0m
     if [ `wc -l $holdfile | awk '{print $1}'` = 0 ]; then
       rm $holdfile
       echo "  "
